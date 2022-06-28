@@ -1,3 +1,74 @@
 body {
     font-family: "Roboto", sans-serif;
 }
+
+.users-list-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+}
+
+/* Small devices (600px and up) */
+@media only screen and (min-width: 600px) {
+    .users-list-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium devices (768px and up) */
+@media only screen and (min-width: 768px) {
+    .users-list-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large devices (992px and up) */
+@media only screen and (min-width: 992px) {
+    .users-list-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.user-card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 350px;
+}
+.user-card-container .user-info-container {
+    display: flex;
+    flex: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.user-card-container .user-info {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ffffff;
+    font-size: 9pt;
+}
+.user-card-container .user-info .user-name {
+    font-size: 11pt;
+    font-weight: 600;
+}
+.user-card-container .user-info .user-email {
+    margin-bottom: 12px;
+}
+.user-card-container .btn-open-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-style: none;
+    background-color: #7ed07a;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 11pt;
+}

@@ -7,9 +7,9 @@ function loadData() {
         getUsers(2).then(secondResponse => {
             users.push(...secondResponse.data);
             users.forEach(user => {
-                let userTag = document.createElement('p');
-                userTag.textContent = `${user.first_name} ${user.last_name}`;
-                containerUserList.appendChild(userTag);
+                let userCard = new UserCard();
+                userCard.setAttribute('user', JSON.stringify(user));
+                containerUserList.appendChild(userCard);
             });
         });
     });
