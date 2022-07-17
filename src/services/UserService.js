@@ -3,7 +3,7 @@ function getUsers(page) {
     let data = localStorage.getItem(`users-page-${page}`);
     if (data) {
         return new Promise(resolve => {
-            alert(`Página ${page} cargada desde LocalStorage`);
+            // alert(`Página ${page} cargada desde LocalStorage`);
             resolve(JSON.parse(data));
         });
     } else {
